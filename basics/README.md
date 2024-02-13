@@ -54,3 +54,46 @@ JSX is stricter than HTML. You have to close tags like <br />. Your component al
 ```
 <div>...</div> or an empty <>...</> wrapper:
 ```
+```
+function AboutPage() {
+  return (
+    <>
+      <h1>About</h1>
+      <p>Hello there.<br />How do you do?</p>
+    </>
+  );
+}
+```
+# Adding styles 
+In React, you specify a CSS class with className. It works the same way as the HTML class attribute:
+```
+<img className="avatar" />
+```
+Then we write the CSS rules for it in a separate CSS file:
+
+/* In your CSS */
+```
+.avatar {
+  border-radius: 50%;
+}
+```
+React does not prescribe how you add CSS files. In the simplest case, you’ll add a <link> tag to your HTML. If you use a build tool or a framework, consult its documentation to learn how to add a CSS file to your project.
+
+* Displaying data 
+JSX lets you put markup into JavaScript. Curly braces let you “escape back” into JavaScript so that you can embed some variable from your code and display it to the user. For example, this will display user.name:
+```
+return (
+  <h1>
+    {user.name}
+  </h1>
+);
+```
+You can also “escape into JavaScript” from JSX attributes, but you have to use curly braces instead of quotes. For example, className="avatar" passes the "avatar" string as the CSS class, but src={user.imageUrl} reads the JavaScript user.imageUrl variable value, and then passes that value as the src attribute:
+```
+return (
+  <img
+    className="avatar"
+    src={user.imageUrl}
+  />
+);
+```
