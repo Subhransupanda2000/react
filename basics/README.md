@@ -52,4 +52,4 @@ export default function MyApp() {
 The markup syntax We’ve seen above is called JSX. It is optional, but most React projects use JSX for its convenience. All of the tools we recommend for local development support JSX out of the box.
 
 JSX is stricter than HTML. You have to close tags like <br />. Your component also can’t return multiple JSX tags. You have to wrap them into a shared parent, like a 
-<div>...</div> or an empty <>...</> wrapper:
+ an empty <>...</> wrapper:
