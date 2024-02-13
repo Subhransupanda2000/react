@@ -79,7 +79,7 @@ Then we write the CSS rules for it in a separate CSS file:
 ```
 React does not prescribe how you add CSS files. In the simplest case, you’ll add a <link> tag to your HTML. If you use a build tool or a framework, consult its documentation to learn how to add a CSS file to your project.
 
-* Displaying data 
+# Displaying data 
 JSX lets you put markup into JavaScript. Curly braces let you “escape back” into JavaScript so that you can embed some variable from your code and display it to the user. For example, this will display user.name:
 ```
 return (
@@ -97,3 +97,4 @@ return (
   />
 );
 ```
+
